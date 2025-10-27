@@ -1,5 +1,4 @@
-let sales = 123_456_789;
-let course = "typescript";
-let is_published = true;
-let level = 5;
+let array : [number,string]= [23,'didier'];
+array.push(1);
 
+console.log(array);
