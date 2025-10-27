@@ -1,4 +1,6 @@
-let array : [number,string]= [23,'didier'];
-array.push(1);
+function calculateTax(income:number , taxyear:number):number{
 
-console.log(array);
+
+  if(taxyear < 2022) return income * 1.2;
+  income+= income  * 1.3 ;
+  return income;
