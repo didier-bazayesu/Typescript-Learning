@@ -1,5 +1,6 @@
 {
   // Visit https://aka.ms/tsconfig to read more about this file
+  "strict": true,
   "compilerOptions": {
     // File Layout
     "rootDir": "./src",
@@ -25,9 +26,11 @@
     "exactOptionalPropertyTypes": true,
     "noEmitOnError": true,
     "removeComments": true,
+    
 
+  
     // Style Options
-    // "noImplicitReturns": true,
+     "noImplicitReturns": false,
     // "noImplicitOverride": true,
     // "noUnusedLocals": true,
     // "noUnusedParameters": true,
