@@ -1,7 +1,4 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let sales = 123_456_789;
-let course = "typescript";
-let is_published = true;
-let level = 5;
+console.log(`hello world and I'm here for you`);
 //# sourceMappingURL=index.js.map
