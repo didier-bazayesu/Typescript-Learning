@@ -1,5 +1,4 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-let array = [23, 'didier'];
-array.push(1);
+console.log(`hello world and I'm here for you`);
 //# sourceMappingURL=index.js.map
