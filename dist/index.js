@@ -1,4 +1,9 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-console.log(`hello world and I'm here for you`);
+function checkType(str) {
+    if (typeof str === 'string')
+        return str.toLocaleUpperCase();
+    return str = true;
+}
+console.log(checkType('didier'));
 //# sourceMappingURL=index.js.map
