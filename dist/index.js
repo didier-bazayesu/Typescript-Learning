@@ -6,4 +6,10 @@ function checkType(str) {
     return str = true;
 }
 console.log(checkType('didier'));
+let array = ['dider', 3];
+array.push(5);
+console.log(array);
+let nameContainer = [2, 'didier', false];
+nameContainer.push(true);
+console.log(nameContainer);
 //# sourceMappingURL=index.js.map
