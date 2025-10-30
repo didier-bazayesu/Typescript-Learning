@@ -1,4 +1,15 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-console.log(`hello world and I'm here for you`);
+function checkType(str) {
+    if (typeof str === 'string')
+        return str.toLocaleUpperCase();
+    return str = true;
+}
+console.log(checkType('didier'));
+let array = ['dider', 3];
+array.push(5);
+console.log(array);
+let nameContainer = [2, 'didier', false];
+nameContainer.push(true);
+console.log(nameContainer);
 //# sourceMappingURL=index.js.map
