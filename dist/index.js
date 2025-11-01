@@ -12,4 +12,7 @@ console.log(array);
 let nameContainer = [2, 'didier', false];
 nameContainer.push(true);
 console.log(nameContainer);
+let numberArray;
+numberArray = [];
+numberArray.push(34646);
 //# sourceMappingURL=index.js.map

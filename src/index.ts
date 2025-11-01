@@ -23,26 +23,26 @@ console.log(nameContainer);
 
 // object 
 
-type shape = {
-  name : string,
-  age : 30,
-  greet : ()=> number,
+// type shape = {
+//   name : string,
+//   age : 30,
+//   greet : ()=> number,
 
-}
+// }
 
-let house = {
+// let house = {
 
-  room : 3,
-  color : 'white',
-  isCold : true
-}
+//   room : 3,
+//   color : 'white',
+//   isCold : true
+// }
 
-let houses = {
-  room:3,
+// let houses = {
+//   room:3,
 
-  color: 'red',
-  isCold : false
-}
+//   color: 'red',
+//   isCold : false
+// }
 
 //explicit on array
 
