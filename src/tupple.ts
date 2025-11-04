@@ -17,3 +17,13 @@ function changeInput(str:number|string){
 }
 
 console.log(changeInput(6666));
+
+
+let functionSignature = (num1:number,num2:number):string=>{
+
+   return '1'+ num1+num2
+}
+
+console.log(functionSignature(203,3045))
+
+
