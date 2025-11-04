@@ -18,10 +18,12 @@ function changeInput(str:number|string){
 
 console.log(changeInput(6666));
 
+type addnumber = (a:number,b:number)=> string;
 
-let functionSignature = (num1:number,num2:number):string=>{
 
-   return '1'+ num1+num2
+let functionSignature:addnumber = (num1,num2)=>{
+
+   return '1'+ num1+num2;
 }
 
 console.log(functionSignature(203,3045))
