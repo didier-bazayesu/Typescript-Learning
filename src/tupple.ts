@@ -20,6 +20,9 @@ console.log(changeInput(6666));
 
 type addnumber = (a:number,b:number)=> string;
 
+// let greet = (a:number,b:number)=> string;
+
+// greet = (num,str)=>  'hello';
 
 let functionSignature:addnumber = (num1,num2)=>{
 

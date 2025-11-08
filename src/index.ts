@@ -1,51 +1,43 @@
-function checkType(str:number|string|boolean){
+// const anchor = document.querySelector("a");
 
-  if(typeof str === 'string') return str.toLocaleUpperCase();
-  return str= true;
+// console.log(anchor);
+
+
+// let arr = [2,3,4,6,4,6,7,0];
+// console.log(arr);
+
+
+
+//Learning type variable 
+
+function checkParameter <t>(value:t):t{
+
+     return value;
+};
+
+console.log(checkParameter(45));
+
+
+//learning union check
+
+function checkUnion (param:unknown){
+console.log(param);
+
 }
 
-console.log(checkType('didier'))
+console.log(checkUnion('didier'));
 
 
-//on array 
 
-let array: [String, number] = ['dider', 3];
+//any type 
 
-array.push(5);
-console.log(array);
+let number : unknown;
 
-//creating default array
+number = 'didier';
+number = 10;
 
-let nameContainer = [2, 'didier',false]
-nameContainer.push(true)
-console.log(nameContainer);
+console.log(number);
 
 
-// object 
+//
 
-// type shape = {
-//   name : string,
-//   age : 30,
-//   greet : ()=> number,
-
-// }
-
-// let house = {
-
-//   room : 3,
-//   color : 'white',
-//   isCold : true
-// }
-
-// let houses = {
-//   room:3,
-
-//   color: 'red',
-//   isCold : false
-// }
-
-//explicit on array
-
-let numberArray : number[];
-numberArray = []
-numberArray.push(34646);

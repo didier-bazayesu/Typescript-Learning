@@ -9,4 +9,8 @@ function changeInput(str) {
     }
 }
 console.log(changeInput(6666));
+let functionSignature = (num1, num2) => {
+    return '1' + num1 + num2;
+};
+console.log(functionSignature(203, 3045));
 //# sourceMappingURL=tupple.js.map
