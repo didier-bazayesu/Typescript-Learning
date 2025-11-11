@@ -68,4 +68,15 @@ proclaim('ready?');
 proclaim('ready!', 3);
 
 
+//function void 
+
+type checkfunction = (name: string) => void;
+function sayHi(name: string, check: checkfunction) {
+   return check(name);
+}
+
+function str(name: string) {
+   console.log(name.toUpperCase())
+};
+console.log(sayHi('didier', str))
 
