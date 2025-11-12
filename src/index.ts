@@ -59,3 +59,42 @@ console.log(checkType('didier'))
 
 // learning and understanding interfaces 
 
+interface dengo {
+   [index:string] : string | (()=> void),
+   greet:()=> void
+}
+
+let person :dengo  = {
+   didier : 'didier',
+   greet: function(){
+      console.log(this.didier)
+   }
+}
+console.log(person)
+
+class Persons  {
+   name : string;
+   constructor(name:string){
+      this.name = name;
+   }
+   greet(){
+      console.log("hello world");
+   }
+}
+let n = new Persons('didier');
+console.log(n)
+
+//intersection type 
+
+type prop1 = {
+   name : 'didier',
+}
+type prop2 = {
+   ages : number
+}
+
+let obj : prop1  | prop2 = {
+   name : 'didier',
+   ages : 45
+}
+console.log(obj)
