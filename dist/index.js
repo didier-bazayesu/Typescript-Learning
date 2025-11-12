@@ -14,6 +14,5 @@ let string;
 string = 45;
 console.log(string);
 let x;
-x = 20;
 console.log(x);
 //# sourceMappingURL=index.js.map
