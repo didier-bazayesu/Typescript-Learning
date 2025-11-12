@@ -1,43 +1,100 @@
-// const anchor = document.querySelector("a");
+//understanding enum 
 
-// console.log(anchor);
+const  enum  ExactValue {
 
-
-// let arr = [2,3,4,6,4,6,7,0];
-// console.log(arr);
-
-
-
-//Learning type variable 
-
-function checkParameter <t>(value:t):t{
-
-     return value;
-};
-
-console.log(checkParameter(45));
-
-
-//learning union check
-
-function checkUnion (param:unknown){
-console.log(param);
-
+   Monday ,
+   Tuesday ,
+   wensday
 }
 
-console.log(checkUnion('didier'));
+let dressCode :ExactValue = ExactValue.Monday;
+console.log(dressCode);
+
+type literal = string | boolean | number;
+
+let num : literal = true;
+console.log(num)
+
+//learning literal type 
+
+ let string : 'str1'|'str3'|'str6'|45;
+ string = 45;
+ console.log(string);
 
 
+ //understanding the main different between null and undefined 
 
-//any type 
+ let x : undefined;
 
-let number : unknown;
-
-number = 'didier';
-number = 10;
-
-console.log(number);
+console.log(x)
 
 
-//
+//defining how undefined triggered as optional property ;
+type checkobject ={
+   name : string ;
+   ages : number 
+   isSingle : boolean;
+   hobby? : any;
+}
 
+let myObject : checkobject = {
+   name : 'didier',
+   ages : 34,
+   isSingle: true,
+   
+}
+
+console.log(myObject);
+
+
+//understanding default parameter and optional chaining
+
+function checkType (str:string,st1?:string){
+    return  st1;
+    ; 
+   
+}
+console.log(checkType('didier'))
+
+
+// learning and understanding interfaces 
+
+interface dengo {
+   [index:string] : string | (()=> void),
+   greet:()=> void
+}
+
+let person :dengo  = {
+   didier : 'didier',
+   greet: function(){
+      console.log(this.didier)
+   }
+}
+console.log(person)
+
+class Persons  {
+   name : string;
+   constructor(name:string){
+      this.name = name;
+   }
+   greet(){
+      console.log("hello world");
+   }
+}
+let n = new Persons('didier');
+console.log(n)
+
+//intersection type 
+
+type prop1 = {
+   name : 'didier',
+}
+type prop2 = {
+   ages : number
+}
+
+let obj : prop1  | prop2 = {
+   name : 'didier',
+   ages : 45
+}
+console.log(obj)

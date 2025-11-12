@@ -1,16 +1,18 @@
 "use strict";
 Object.defineProperty(exports, "__esModule", { value: true });
-function checkParameter(value) {
-    return value;
-}
-;
-console.log(checkParameter(45));
-function checkUnion(param) {
-    console.log(param);
-}
-console.log(checkUnion('didier'));
-let number;
-number = 'didier';
-number = 10;
-console.log(number);
+var ExactValue;
+(function (ExactValue) {
+    ExactValue[ExactValue["Monday"] = 0] = "Monday";
+    ExactValue[ExactValue["Tuesday"] = 1] = "Tuesday";
+    ExactValue[ExactValue["wensday"] = 2] = "wensday";
+})(ExactValue || (ExactValue = {}));
+let dressCode = ExactValue.Monday;
+console.log(dressCode);
+let num = true;
+console.log(num);
+let string;
+string = 45;
+console.log(string);
+let x;
+console.log(x);
 //# sourceMappingURL=index.js.map
