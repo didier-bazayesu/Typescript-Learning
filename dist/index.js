@@ -64,4 +64,23 @@ function handleGeneric(val) {
     console.log("value:", val);
 }
 console.log(handleGeneric([1, 2, 3, 4, 5, 6, 7]));
+function changeInheritis(value) {
+    console.log(value);
+}
+console.log(changeInheritis());
+let handleTown = {
+    name: "karongi",
+    location: "krng0023N0383",
+    load: "RD0346"
+};
+console.log(handleTown);
+function handleGenericInterface(value) {
+    console.log(value);
+}
+let objss = {
+    name: 'canada',
+    location: 'didier',
+    load: "RD0346"
+};
+console.log(handleGenericInterface(objss));
 //# sourceMappingURL=index.js.map

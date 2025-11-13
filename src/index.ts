@@ -161,3 +161,27 @@ let  school :pickType  = {
   console.log(changeInheritis())
 
   //understanding generic interface 
+
+  interface  genericInterface <t,g,b>{
+   name: t;
+     location: g;
+     load: b
+  }
+
+let handleTown: genericInterface<string, string, string>={
+   name : "karongi",
+ location: "krng0023N0383",
+   load : "RD0346"
+  }
+  console.log(handleTown);
+
+function handleGenericInterface<t,g,b>(value: genericInterface<t,g,b>):void{
+     console.log(value);
+  }
+  let objss ={
+   name : 'canada',
+   location : 'didier',
+    
+     load: "RD0346"
+  }
+  console.log(handleGenericInterface(objss))
