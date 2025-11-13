@@ -185,3 +185,14 @@ function handleGenericInterface<t,g,b>(value: genericInterface<t,g,b>):void{
      load: "RD0346"
   }
   console.log(handleGenericInterface(objss))
+
+  // Index access types 
+
+
+type indexAccesType = checkobject['ages'];
+
+function handleMeal(value:indexAccesType){
+     return  value;
+
+}
+console.log(handleMeal(56));
