@@ -111,9 +111,8 @@ type requtility = Partial<partailUtility>;
 
 let object : requtility = {
    name : 'didier',
-   
-   
 }
+console.log(object)
 
 // understanding pick type 
 
@@ -129,3 +128,36 @@ let  school :pickType  = {
    name : "Huye"
   }
   console.log(home);
+
+
+  //creating generic data type
+
+  //single generic parameter 
+  function handleGeneric<v>(val:v):void{
+      console.log("value:", val)
+  }
+
+  console.log(handleGeneric([1,2,3,4,5,6,7]));
+
+  //generic with optional parameter 
+
+
+  //interface inheritance 
+
+  interface handleInherit {
+   name : string ,
+   ages : number ,
+   student_id : number
+  }
+  interface  inheritis extends handleInherit{
+   account_id: number 
+  }
+
+  function changeInheritis <t extends handleInherit | inheritis>(value ?: t) : void{
+
+    console.log(value);
+  }
+
+  console.log(changeInheritis())
+
+  //understanding generic interface 
