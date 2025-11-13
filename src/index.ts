@@ -98,3 +98,34 @@ let obj : prop1  | prop2 = {
    ages : 45
 }
 console.log(obj)
+
+
+// partial utility type 
+
+
+interface partailUtility{
+   name : string ;
+   ages : number
+}
+type requtility = Partial<partailUtility>;
+
+let object : requtility = {
+   name : 'didier',
+   
+   
+}
+
+// understanding pick type 
+
+type pickType = Pick<partailUtility,"name">
+let  school :pickType  = {
+   name : "Group scolaire Nawe "
+} 
+
+//understanding typeof type operator in typescript
+
+  type strings = typeof school 
+  let home :strings = {
+   name : "Huye"
+  }
+  console.log(home);
