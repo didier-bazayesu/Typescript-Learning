@@ -98,3 +98,111 @@ let obj : prop1  | prop2 = {
    ages : 45
 }
 console.log(obj)
+
+
+// partial utility type 
+
+
+interface partailUtility{
+   name : string ;
+   ages : number
+}
+type requtility = Partial<partailUtility>;
+
+let object : requtility = {
+   name : 'didier',
+}
+console.log(object)
+
+// understanding pick type 
+
+type pickType = Pick<partailUtility,"name">
+let  school :pickType  = {
+   name : "Group scolaire Nawe "
+} 
+
+//understanding typeof type operator in typescript
+
+  type strings = typeof school 
+  let home :strings = {
+   name : "Huye"
+  }
+  console.log(home);
+
+
+  //creating generic data type
+
+  //single generic parameter 
+  function handleGeneric<v>(val:v):void{
+      console.log("value:", val)
+  }
+
+  console.log(handleGeneric([1,2,3,4,5,6,7]));
+
+  //generic with optional parameter 
+
+
+  //interface inheritance 
+
+  interface handleInherit {
+   name : string ,
+   ages : number ,
+   student_id : number
+  }
+  interface  inheritis extends handleInherit{
+   account_id: number 
+  }
+
+  function changeInheritis <t extends handleInherit | inheritis>(value ?: t) : void{
+
+    console.log(value);
+  }
+
+  console.log(changeInheritis())
+
+  //understanding generic interface 
+
+  interface  genericInterface <t,g,b>{
+   name: t;
+     location: g;
+     load: b
+  }
+
+let handleTown: genericInterface<string, string, string>={
+   name : "karongi",
+ location: "krng0023N0383",
+   load : "RD0346"
+  }
+  console.log(handleTown);
+
+function handleGenericInterface<t,g,b>(value: genericInterface<t,g,b>):void{
+     console.log(value);
+  }
+  let objss ={
+   name : 'canada',
+   location : 'didier',
+    
+     load: "RD0346"
+  }
+  console.log(handleGenericInterface(objss))
+
+  // Index access types 
+
+
+type indexAccesType = checkobject['ages'];
+
+function handleMeal(value:indexAccesType){
+     return  value;
+
+}
+console.log(handleMeal(56));
+
+
+// function docithe<p,q>(str:p,str1:q){
+   
+// }
+
+
+//the question for understanding 
+
+/// <reference path = "tupple.ts">
