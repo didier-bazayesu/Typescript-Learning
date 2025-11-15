@@ -83,9 +83,8 @@ let objss = {
     load: "RD0346"
 };
 console.log(handleGenericInterface(objss));
-
-
-//index access type 
-
-
+function handleMeal(value) {
+    return value;
+}
+console.log(handleMeal(56));
 //# sourceMappingURL=index.js.map

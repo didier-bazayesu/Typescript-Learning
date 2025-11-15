@@ -196,3 +196,13 @@ function handleMeal(value:indexAccesType){
 
 }
 console.log(handleMeal(56));
+
+
+// function docithe<p,q>(str:p,str1:q){
+   
+// }
+
+
+//the question for understanding 
+
+/// <reference path = "tupple.ts">
