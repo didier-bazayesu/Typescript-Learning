@@ -75,3 +75,12 @@ numberOfDogs = getDogs;  // Dog type is also included in Animal so can be used a
                         //animal can work
 
 
+//contravariance 
+
+
+let getOfDogs: (dog:Dog) => void;
+function  sumOfDogs (animal : Animal){
+    console.log(new Animal());
+}
+
+getOfDogs = sumOfDogs;
