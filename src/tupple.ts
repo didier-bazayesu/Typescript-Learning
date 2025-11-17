@@ -84,3 +84,19 @@ function  sumOfDogs (animal : Animal){
 }
 
 getOfDogs = sumOfDogs;
+
+
+//Why is this a problem: const obj = { a: 1, b: 2 }; type Keys 
+// = keyof typeof obj; What's the difference
+//  between typeof obj and just writing the type directly?
+
+//example
+
+let object = {
+    a:2 ,
+    b: 4
+};
+
+type checking = keyof typeof object;
+let n : checking = "a";
+console.log(n);
