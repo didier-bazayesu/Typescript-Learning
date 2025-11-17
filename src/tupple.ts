@@ -53,6 +53,11 @@ console.log(Person);
 
 //understanding covariance
 
+
+
+
+//real example for covarince 
+
 class Animal {
 
 };
@@ -60,6 +65,13 @@ class Dog extends Animal {
 
 };
 
-let dogs : Dog = new  Animal ;
-let animals : Animal = dogs;
+function getDogs(): Dog {
+    return new Dog()
+};
+
+let numberOfDogs : ()=> Animal;
+
+numberOfDogs = getDogs;  // Dog type is also included in Animal so can be used any where 
+                        //animal can work
+
 
