@@ -35,3 +35,31 @@
 console.log("emmanuel")
 
 
+
+
+//understanding and learning Decorator in typescript 
+
+function sayHello(value: Function){
+    console.log("hello didier How are you!");
+}
+
+@sayHello
+
+class Person {
+};
+
+console.log(Person);
+
+
+//understanding covariance
+
+class Animal {
+
+};
+class Dog extends Animal {
+
+};
+
+let dogs : Dog = new  Animal ;
+let animals : Animal = dogs;
+
