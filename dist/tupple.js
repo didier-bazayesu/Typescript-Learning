@@ -17,4 +17,29 @@ Person = __decorate([
 ], Person);
 ;
 console.log(Person);
+class Animal {
+}
+;
+class Dog extends Animal {
+}
+;
+function getDogs() {
+    return new Dog();
+}
+;
+let numberOfDogs;
+numberOfDogs = getDogs;
+let getOfDogs;
+function sumOfDogs(animal) {
+    console.log(new Animal());
+}
+getOfDogs = sumOfDogs;
+let object = {
+    a: 2,
+    b: 4
+};
+let n = "a";
+console.log(n);
+console.log(getOfDogs);
+console.log(numberOfDogs);
 //# sourceMappingURL=tupple.js.map

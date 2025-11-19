@@ -100,3 +100,6 @@ let object = {
 type checking = keyof typeof object;
 let n : checking = "a";
 console.log(n);
+
+console.log(getOfDogs);
+console.log(numberOfDogs);
