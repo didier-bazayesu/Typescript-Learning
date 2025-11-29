@@ -58,5 +58,19 @@ var Color;
     Color["Green"] = "GREEN";
     Color["Blue"] = "BLUE";
 })(Color || (Color = {}));
-console.log(Color.Blue);
+function getColorCode(color) {
+    switch (color) {
+        case Color.Blue:
+            return "BLUE";
+            break;
+        case Color.Red:
+            return "RED";
+            break;
+        case Color.Green:
+            return "GREEN";
+            break;
+        default: throw new Error("Invalid color");
+    }
+}
+console.log(getColorCode(Color.Blue));
 //# sourceMappingURL=gatePreparation.js.map
