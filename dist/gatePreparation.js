@@ -73,4 +73,20 @@ function getColorCode(color) {
     }
 }
 console.log(getColorCode(Color.Blue));
+const user = {
+    name: "didier",
+    age: 23,
+    email: "didierbazayesu@gmail.com"
+};
+function getProperty(obj, key) {
+    return obj[key];
+}
+console.log(getProperty(user, "name"));
+console.log(getProperty(user, "age"));
+function formatUserTuple(user) {
+    const [name, age, active] = user;
+    return `${name} is ${age} Years old and is ${active ? 'active' : "inactive"} `;
+}
+console.log(formatUserTuple(["Alice", 28, true]));
+console.log(formatUserTuple(["Bob", 35, false]));
 //# sourceMappingURL=gatePreparation.js.map

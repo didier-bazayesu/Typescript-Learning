@@ -114,6 +114,52 @@ console.log(getColorCode(Color.Blue));
 //function that throws the error
 
 
+//Generic function with constraints
+interface User {
+    name: string;
+    age: number;
+    email: string;
+}
+const user = {
+    name : "didier",
+    age : 23,
+    email : "didierbazayesu@gmail.com"
+} 
+function getProperty <k extends User,t extends keyof User> (obj:k,key:t): k[t]{
+    return obj[key];
+
+}
+console.log(getProperty(user,"name"))
+console.log(getProperty(user,"age"));
+
+
+//Understanding how tupple works 
+type tuplle = [name: string, age: number, active: boolean]
+
+function formatUserTuple(user:tuplle){
+    const [name ,age,active] = user;
+
+    return `${name} is ${age} Years old and is ${active ?  'active' : "inactive"} `;
+}
+
+console.log(formatUserTuple(["Alice", 28, true]));
+console.log(formatUserTuple(["Bob", 35, false]))
+
+
+
+//Learning type guard 
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
