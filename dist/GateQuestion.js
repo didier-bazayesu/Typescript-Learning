@@ -11,4 +11,14 @@ const config = {
     timeout: 5000
 };
 console.log(config);
+var Color;
+(function (Color) {
+    Color["Red"] = "RED";
+    Color["Green"] = "GREEN";
+    Color["Blue"] = "BLUE";
+})(Color || (Color = {}));
+function getColorCode(color) {
+    return typeof color == "string" ? Infinity : color;
+}
+console.log(getColorCode(Color.Red));
 //# sourceMappingURL=GateQuestion.js.map

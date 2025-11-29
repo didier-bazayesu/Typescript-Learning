@@ -30,4 +30,16 @@ console.log(config);
 
 // The task number 12 never type 
 
+enum Color {
+    Red = "RED",
+    Green = "GREEN",
+    Blue = "BLUE"
+}
+
+function getColorCode(color: Color): string|number{
+
+    return  typeof color  == "string" ? Infinity : color;
+    
+}
+console.log(getColorCode(Color.Red));
 
