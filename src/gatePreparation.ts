@@ -149,6 +149,20 @@ console.log(formatUserTuple(["Bob", 35, false]))
 
 //Learning type guard 
 
+type typeGuards = string | number | boolean;
+
+function  processValue(value:typeGuards):typeGuards{
+    return typeof value == "number" ? 
+    `Number value is ${value+=value}` : 
+    typeof value == "string" ?  `String value  : ${value.toLocaleUpperCase()}`: `Boolean value : ${value}`
+}
+
+console.log(processValue(20));
+console.log(processValue(true));
+console.log(processValue("google"));
+
+
+
 
 
 

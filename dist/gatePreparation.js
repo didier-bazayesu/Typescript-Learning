@@ -89,4 +89,12 @@ function formatUserTuple(user) {
 }
 console.log(formatUserTuple(["Alice", 28, true]));
 console.log(formatUserTuple(["Bob", 35, false]));
+function processValue(value) {
+    return typeof value == "number" ?
+        `Number value is ${value += value}` :
+        typeof value == "string" ? `String value  : ${value.toLocaleUpperCase()}` : `Boolean value : ${value}`;
+}
+console.log(processValue(20));
+console.log(processValue(true));
+console.log(processValue("google"));
 //# sourceMappingURL=gatePreparation.js.map
