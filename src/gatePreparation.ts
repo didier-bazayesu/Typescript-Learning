@@ -94,7 +94,7 @@ enum Color {
     Blue = "BLUE"
 }
 
-function getColorCode (color:Color){
+function getColorCode (color:Color):string |never{
 
     switch(color){
         case Color.Blue : return "BLUE"
