@@ -178,4 +178,10 @@ let object = {
     }
 };
 console.log(object);
+let obj = {
+    name: "didier",
+    age: 34,
+    country: "Rwanda"
+};
+console.log(obj);
 //# sourceMappingURL=gatePreparation.js.map

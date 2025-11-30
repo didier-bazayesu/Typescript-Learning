@@ -305,6 +305,16 @@ let object:indexSignature = {
 console.log(object);
 
 
+//learning record utility type
+
+
+let obj :Record<"name"|"age"|"country",string|number> = {
+    name : "didier",
+    age : 34,
+    country : "Rwanda"
+}
+console.log(obj);
+
 
 
 
