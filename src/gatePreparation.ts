@@ -407,6 +407,41 @@ console.log(Number(number));
 console.log(fatherName);
 
 
+//learning function overloading in typescript
+
+
+function addd (a:number, b:number):number;
+function addd(a:string, b:string): string;
+
+//implementation
+
+function addd(a:any , b:any){
+    return a + b;
+}
+let  sum = addd(1,2);
+
+console.log(sum);
+console.log(addd("didier", " Welcome!"));
+
+
+class myBluepprint {
+    public name : string;
+    public age : number;
+
+    constructor(name :string,age:number){
+        this.name = name as string;
+        this.age = age
+        
+        
+    }
+}
+let blueprint1 = new myBluepprint("didier", 34);
+console.log(blueprint1);
+let blueprint2 : myBluepprint = {
+    name : "Patrick",
+    age : 64
+}
+console.log(blueprint2)
 
 
 

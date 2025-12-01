@@ -225,4 +225,25 @@ let fatherName = "Jeanbosco";
 let number = "123";
 console.log(Number(number));
 console.log(fatherName);
+function addd(a, b) {
+    return a + b;
+}
+let sum = addd(1, 2);
+console.log(sum);
+console.log(addd("didier", " Welcome!"));
+class myBluepprint {
+    name;
+    age;
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+let blueprint1 = new myBluepprint("didier", 34);
+console.log(blueprint1);
+let blueprint2 = {
+    name: "Patrick",
+    age: 64
+};
+console.log(blueprint2);
 //# sourceMappingURL=gatePreparation.js.map
