@@ -316,6 +316,103 @@ let obj :Record<"name"|"age"|"country",string|number> = {
 console.log(obj);
 
 
+// understanding mapped type 
+
+
+interface  mappedType{
+    name : string,
+    age : number
+}
+
+
+type makeOptional<t> = {
+   [key in keyof t]? : t[key];
+ 
+  
+} 
+interface  country{
+    country?: string
+}
+let mappedObject :makeOptional<mappedType> & country = {
+    name :"didier",
+    country : "Rwanda"
+   
+} 
+console.log(mappedObject)
+
+type omit =  Omit<mappedType,"age">
+let omitObject:omit ={
+
+    name : "didier",
+    
+}
+console.log(omitObject)
+//pick
+type pick =  Pick<mappedType,"age">
+let pickObject :pick = {
+    age : 34,
+    
+}
+
+console.log(pickObject)
+
+let keyofObject = {
+    name: "mukundwa",
+    age : 34,
+    residence : "Rwanda",
+    isAdmin : true
+
+}
+
+type typeKeyOfObject = typeof keyofObject;
+let f :typeKeyOfObject = {
+    name:"didier",
+    age : 24,
+    residence : "burundi",
+    isAdmin : true
+}
+console.log(f)
+
+type checlValue = typeKeyOfObject[keyof typeKeyOfObject];
+let c : checlValue = true;
+console.log(c)
+let mycity  = {
+
+    name : "Gaseke",
+    Dstrict :"Rwanda",
+
+    population : 347474
+
+} as const;
+console.log(mycity)
+ 
+
+//larning type casting and type assertion
+
+type checkMyname = string | number;
+
+let myname:checkMyname ="didier bazayesu";
+
+let newName = myname as string;
+console.log(newName);
+
+
+//type assertion
+let fatherName = "Jeanbosco" as string;
+
+//typecasting 
+
+let number = "123"
+console.log(Number(number));
+console.log(fatherName);
+
+
+
+
+
+
+
+
 
 
 

@@ -184,4 +184,45 @@ let obj = {
     country: "Rwanda"
 };
 console.log(obj);
+let mappedObject = {
+    name: "didier",
+    country: "Rwanda"
+};
+console.log(mappedObject);
+let omitObject = {
+    name: "didier",
+};
+console.log(omitObject);
+let pickObject = {
+    age: 34,
+};
+console.log(pickObject);
+let keyofObject = {
+    name: "mukundwa",
+    age: 34,
+    residence: "Rwanda",
+    isAdmin: true
+};
+let f = {
+    name: "didier",
+    age: 24,
+    residence: "burundi",
+    isAdmin: true
+};
+console.log(f);
+let c = true;
+console.log(c);
+let mycity = {
+    name: "Gaseke",
+    Dstrict: "Rwanda",
+    population: 347474
+};
+console.log(mycity);
+let myname = "didier bazayesu";
+let newName = myname;
+console.log(newName);
+let fatherName = "Jeanbosco";
+let number = "123";
+console.log(Number(number));
+console.log(fatherName);
 //# sourceMappingURL=gatePreparation.js.map
