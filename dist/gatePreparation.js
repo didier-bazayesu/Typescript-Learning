@@ -246,4 +246,28 @@ let blueprint2 = {
     age: 64
 };
 console.log(blueprint2);
+function logLength(value) {
+    console.log(value.length);
+}
+console.log(logLength("didier"));
+let taxObject = {
+    vat: 234,
+    tid: 234,
+    vatName: "value added tax"
+};
+function checkTaxName(obj, key) {
+    return obj[key];
+}
+console.log(checkTaxName(taxObject, "vatName"));
+let name = "Didier";
+let lowerCase = "didier";
+console.log(name);
+console.log(lowerCase);
+function sub(a, b) {
+    return a + b;
+}
+let num1 = [36464, 37474];
+let num2 = 37474;
+console.log(num1);
+console.log(num2);
 //# sourceMappingURL=gatePreparation.js.map

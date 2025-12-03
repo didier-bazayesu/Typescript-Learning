@@ -444,6 +444,50 @@ let blueprint2 : myBluepprint = {
 console.log(blueprint2)
 
 
+// understanding generic vs generic constrainsts
+
+function logLength<T extends { length: number ,toUpperCase:()=> string}>(value: T): void {
+    console.log(value.length);
+}
+console.log(logLength("didier"));
+
+
+//simple example 
+
+let taxObject =  {
+    vat : 234,
+    tid : 234,
+    vatName : "value added tax"
+}
+
+function checkTaxName <T,K extends keyof T>(obj:T, key:K):T[K]{
+      return  obj[key]
+}
+console.log(checkTaxName(taxObject,"vatName"))
+
+
+//understanding utility type
+
+type didier = "didier";
+type utility = Capitalize <didier>;
+type lower = Lowercase<didier>
+
+let name : utility = "Didier";
+let lowerCase : lower = "didier";
+console.log(name);
+console.log(lowerCase);
+function sub(a:number , b:number){
+    return a+b;
+}
+type parameterType =Parameters<typeof sub> ;
+type returnType = ReturnType<typeof sub>
+let num1: parameterType= [36464,37474];
+let num2 :returnType = 37474;
+console.log(num1);
+console.log(num2)
+
+
+
 
 
 
