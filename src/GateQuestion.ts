@@ -1,45 +1,29 @@
-//this is for question 8
+// Solve all the typing issues in the code without changing the implementation
+type handle = (...a:string[]) => string
 
-type typeGuard = number | boolean| string;
-
-const checkType = (value:typeGuard):typeGuard=>{
-
-    return   typeof value == "number" ? value * 2 : typeof value == "string" ? value.toUpperCase()  : !value;
+ const d : handle = function concatenate(...strings) {
+    return strings.join('');
 }
-
-console.log(checkType(10))
-console.log(checkType('didier'));
-console.log(checkType(true));
+console.log(d('Hello', 'Hi', 'Hola'));
 
 
 
-//Question 9
-
-interface Config {
-    apiUrl : string;
-    timeout : number
-}
-
-const  config : Readonly<Config>={
-     apiUrl : "https://api.example.com",
-     timeout:  5000
-}
-
-console.log(config);
 
 
-// The task number 12 never type 
 
-enum Color {
-    Red = "RED",
-    Green = "GREEN",
-    Blue = "BLUE"
-}
 
-function getColorCode(color: Color): string|number{
+// function processItems(items, callback) {
+//     return items
+//       .filter(item => typeof item === 'string' || typeof item === 'number')
+//       .map(item => callback(item));
+//   }
 
-    return  typeof color  == "string" ? Infinity : color;
-    
-}
-console.log(getColorCode(Color.Red));
+//   const result = processItems(
+//     ["hello", 42, true, null],
+//     function (item) {
+//       if (typeof item === "string") return item.toUpperCase();
+//       return item * 2;
+//     }
+//   );
 
+//   console.log(result);

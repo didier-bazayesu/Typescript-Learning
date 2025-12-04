@@ -270,4 +270,36 @@ let num1 = [36464, 37474];
 let num2 = 37474;
 console.log(num1);
 console.log(num2);
+let didier = "didier";
+function optionalParameter(value) {
+    return value;
+}
+console.log(optionalParameter());
+const nulloptionalObject = { name: "Didier" };
+console.log(nulloptionalObject.address?.city);
+class UseIndexSignature {
+    amount = 2000;
+    setname = "";
+    greet(name, deposit) {
+        this.setname = name;
+        this.amount += deposit;
+        console.log(`Hello ${this.setname}, your total amount is ${this.amount}`);
+    }
+}
+const person1 = new UseIndexSignature();
+person1.greet("didier", 3450);
+let objectCombine = {
+    name: "didier",
+    age: 123,
+    country: "rwanda"
+};
+console.log(objectCombine);
+let handleArray = [1, 2, 3, 4, 5];
+let newArray = [1, 2, 3, 1, 2, 3, 4];
+console.log(handleArray);
+console.log(newArray);
+function changeMind(...value) {
+    return value;
+}
+console.log(changeMind(1, 2, 3, 4, 4, "hey"));
 //# sourceMappingURL=gatePreparation.js.map

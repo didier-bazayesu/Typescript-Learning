@@ -487,7 +487,83 @@ console.log(num1);
 console.log(num2)
 
 
+//learning infer
 
+type m<T> = T extends (infer U) ? U : any;
+type  type1 = m<string>;
+
+let didier : type1 = "didier"
+
+function optionalParameter (value?:string){
+    return value
+}
+console.log(optionalParameter())
+
+
+// the difference between optional  chaining and null assertion operator
+
+type NulloptionalCheck = {
+    name: string;
+    address?: { city: string };
+};
+
+const nulloptionalObject: NulloptionalCheck = { name: "Didier" };
+
+console.log(nulloptionalObject.address?.city);
+// console.log(nulloptionalObject.address!.city);
+
+class UseIndexSignature {
+    [key:string] : number|string|undefined|((a:string,b:number)=> void);
+ 
+    private amount = 2000;
+    public setname :string ="";
+    greet(name:string,deposit:number):void{
+        this.setname = name;
+        this.amount += deposit;
+        console.log(`Hello ${this.setname}, your total amount is ${this.amount}`);
+    
+
+    }
+}
+
+const person1 = new UseIndexSignature();
+person1.greet("didier",3450);
+
+
+//recaping union type 
+
+type unionAnimal = {
+    name :string,
+    age : number
+};
+type anotherUnionTyppe =  {
+    country : string
+}
+
+type combine  =  unionAnimal | anotherUnionTyppe;
+
+let objectCombine :combine ={
+    name: "didier",
+    age: 123,
+    country :"rwanda"
+}
+
+console.log(objectCombine)
+// another wat of creating the array
+
+let handleArray : Array<number> = [1,2,3,4,5];
+type v<T>= Array<T>;
+type nomino = v<number>;
+let newArray :nomino=  [1,2,3,1,2,3,4]
+console.log(handleArray);
+console.log(newArray)
+
+
+
+function changeMind (...value:(number|string)[]):(number|string)[]{
+   return value
+}
+console.log(changeMind(1,2,3,4,4,"hey"));
 
 
 
