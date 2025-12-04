@@ -118,4 +118,156 @@ const total = calculateTotal(products);
 console.log(total);
 const discounted = applyDiscount(Number(total), 0.1);
 console.log(discounted);
+;
+;
+function mergeObjects(obj1, obj2) {
+    return { ...obj1, ...obj2 };
+}
+function getNestedValue(obj, path) {
+    const keys = path.split('.');
+    let value = obj;
+    for (let key of keys) {
+        if (value == null)
+            return undefined;
+        value = value[key];
+    }
+    return value;
+}
+const person = {
+    name: "John",
+    address: {
+        street: "123 Main St",
+        city: "New York"
+    }
+};
+const updates = { age: 30, city: "Boston" };
+const merged = mergeObjects(person, updates);
+const street = getNestedValue(person, "address.street");
+console.log(merged);
+console.log(street);
+function isBook(check) {
+    return typeof check !== "string";
+}
+const items = [
+    { title: "1984", isbn: "978-0451524935" },
+    "Not a book",
+    { title: "Brave New World", isbn: "978-0060085261" }
+];
+const books = items.filter(isBook);
+console.log(books);
+function isString(value) {
+    if (typeof value == "number") {
+        return true;
+    }
+    else {
+        return false;
+    }
+}
+console.log(isString(123));
+var d;
+(function (d) {
+    d["name"] = "didier";
+    d[d["age"] = 34] = "age";
+})(d || (d = {}));
+console.log(d.age);
+let object = {
+    name: "didier",
+    age: 23,
+    greet() {
+        console.log(this.name);
+    }
+};
+console.log(object);
+let obj = {
+    name: "didier",
+    age: 34,
+    country: "Rwanda"
+};
+console.log(obj);
+let mappedObject = {
+    name: "didier",
+    country: "Rwanda"
+};
+console.log(mappedObject);
+let omitObject = {
+    name: "didier",
+};
+console.log(omitObject);
+let pickObject = {
+    age: 34,
+};
+console.log(pickObject);
+let keyofObject = {
+    name: "mukundwa",
+    age: 34,
+    residence: "Rwanda",
+    isAdmin: true
+};
+let f = {
+    name: "didier",
+    age: 24,
+    residence: "burundi",
+    isAdmin: true
+};
+console.log(f);
+let c = true;
+console.log(c);
+let mycity = {
+    name: "Gaseke",
+    Dstrict: "Rwanda",
+    population: 347474
+};
+console.log(mycity);
+let myname = "didier bazayesu";
+let newName = myname;
+console.log(newName);
+let fatherName = "Jeanbosco";
+let number = "123";
+console.log(Number(number));
+console.log(fatherName);
+function addd(a, b) {
+    return a + b;
+}
+let sum = addd(1, 2);
+console.log(sum);
+console.log(addd("didier", " Welcome!"));
+class myBluepprint {
+    name;
+    age;
+    constructor(name, age) {
+        this.name = name;
+        this.age = age;
+    }
+}
+let blueprint1 = new myBluepprint("didier", 34);
+console.log(blueprint1);
+let blueprint2 = {
+    name: "Patrick",
+    age: 64
+};
+console.log(blueprint2);
+function logLength(value) {
+    console.log(value.length);
+}
+console.log(logLength("didier"));
+let taxObject = {
+    vat: 234,
+    tid: 234,
+    vatName: "value added tax"
+};
+function checkTaxName(obj, key) {
+    return obj[key];
+}
+console.log(checkTaxName(taxObject, "vatName"));
+let name = "Didier";
+let lowerCase = "didier";
+console.log(name);
+console.log(lowerCase);
+function sub(a, b) {
+    return a + b;
+}
+let num1 = [36464, 37474];
+let num2 = 37474;
+console.log(num1);
+console.log(num2);
 //# sourceMappingURL=gatePreparation.js.map

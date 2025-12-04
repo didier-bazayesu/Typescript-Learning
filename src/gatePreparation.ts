@@ -202,6 +202,303 @@ console.log(discounted);
 
 
 
+//type checking for another question
+interface PersonCheck {
+    name: string,
+    address: {
+        street: string,
+        city: string
+    }
+};
+
+interface  update {
+    age : number;
+    city : string
+};
+
+
+function mergeObjects(obj1:PersonCheck, obj2:update) {
+    return { ...obj1, ...obj2 };
+}
+
+function getNestedValue(obj:PersonCheck, path:string) {
+    const keys: string[] = path.split('.');
+    let value :any= obj;
+    for (let key of keys) {
+        if(value == null) return undefined;
+        value = value[key];
+    }
+    return value;
+}
+
+
+
+const person = {
+    name: "John",
+    address: {
+        street: "123 Main St",
+        city: "New York"
+    }
+};
+
+const updates = { age: 30, city: "Boston" };
+const merged = mergeObjects(person, updates);
+const street = getNestedValue(person, "address.street");
+
+console.log(merged);
+console.log(street);
+
+
+
+//  custom type prediction type  and undrstanding how check is works 
+
+interface Book {
+    title : string;
+    isbn : string
+}
+function isBook(check:Book|string):check is Book{
+  
+    return typeof check !== "string";
+}
+const items: (Book | string)[] = [
+    { title: "1984", isbn: "978-0451524935" },
+    "Not a book",
+    { title: "Brave New World", isbn: "978-0060085261" }
+];
+const books = items.filter(isBook);
+console.log(books);
+
+
+//other example
+
+function isString (value:string|number):value is number{
+    if(typeof value == "number"){
+        return true;
+    }else{
+        return false;
+    }
+}
+console.log(isString(123));
+
+
+enum d {
+     name = "didier",
+     age = 34
+
+}
+
+console.log(d.age);
+
+
+
+
+interface indexSignature{
+    [key :string] : string| number | (()=> void)
+}
+let object:indexSignature = {
+    name : "didier",
+    age : 23,
+    greet(){
+        console.log(this.name);
+    }
+}
+console.log(object);
+
+
+//learning record utility type
+
+
+let obj :Record<"name"|"age"|"country",string|number> = {
+    name : "didier",
+    age : 34,
+    country : "Rwanda"
+}
+console.log(obj);
+
+
+// understanding mapped type 
+
+
+interface  mappedType{
+    name : string,
+    age : number
+}
+
+
+type makeOptional<t> = {
+   [key in keyof t]? : t[key];
+ 
+  
+} 
+interface  country{
+    country?: string
+}
+let mappedObject :makeOptional<mappedType> & country = {
+    name :"didier",
+    country : "Rwanda"
+   
+} 
+console.log(mappedObject)
+
+type omit =  Omit<mappedType,"age">
+let omitObject:omit ={
+
+    name : "didier",
+    
+}
+console.log(omitObject)
+//pick
+type pick =  Pick<mappedType,"age">
+let pickObject :pick = {
+    age : 34,
+    
+}
+
+console.log(pickObject)
+
+let keyofObject = {
+    name: "mukundwa",
+    age : 34,
+    residence : "Rwanda",
+    isAdmin : true
+
+}
+
+type typeKeyOfObject = typeof keyofObject;
+let f :typeKeyOfObject = {
+    name:"didier",
+    age : 24,
+    residence : "burundi",
+    isAdmin : true
+}
+console.log(f)
+
+type checlValue = typeKeyOfObject[keyof typeKeyOfObject];
+let c : checlValue = true;
+console.log(c)
+let mycity  = {
+
+    name : "Gaseke",
+    Dstrict :"Rwanda",
+
+    population : 347474
+
+} as const;
+console.log(mycity)
+ 
+
+//larning type casting and type assertion
+
+type checkMyname = string | number;
+
+let myname:checkMyname ="didier bazayesu";
+
+let newName = myname as string;
+console.log(newName);
+
+
+//type assertion
+let fatherName = "Jeanbosco" as string;
+
+//typecasting 
+
+let number = "123"
+console.log(Number(number));
+console.log(fatherName);
+
+
+//learning function overloading in typescript
+
+
+function addd (a:number, b:number):number;
+function addd(a:string, b:string): string;
+
+//implementation
+
+function addd(a:any , b:any){
+    return a + b;
+}
+let  sum = addd(1,2);
+
+console.log(sum);
+console.log(addd("didier", " Welcome!"));
+
+
+class myBluepprint {
+    public name : string;
+    public age : number;
+
+    constructor(name :string,age:number){
+        this.name = name as string;
+        this.age = age
+        
+        
+    }
+}
+let blueprint1 = new myBluepprint("didier", 34);
+console.log(blueprint1);
+let blueprint2 : myBluepprint = {
+    name : "Patrick",
+    age : 64
+}
+console.log(blueprint2)
+
+
+// understanding generic vs generic constrainsts
+
+function logLength<T extends { length: number ,toUpperCase:()=> string}>(value: T): void {
+    console.log(value.length);
+}
+console.log(logLength("didier"));
+
+
+//simple example 
+
+let taxObject =  {
+    vat : 234,
+    tid : 234,
+    vatName : "value added tax"
+}
+
+function checkTaxName <T,K extends keyof T>(obj:T, key:K):T[K]{
+      return  obj[key]
+}
+console.log(checkTaxName(taxObject,"vatName"))
+
+
+//understanding utility type
+
+type didier = "didier";
+type utility = Capitalize <didier>;
+type lower = Lowercase<didier>
+
+let name : utility = "Didier";
+let lowerCase : lower = "didier";
+console.log(name);
+console.log(lowerCase);
+function sub(a:number , b:number){
+    return a+b;
+}
+type parameterType =Parameters<typeof sub> ;
+type returnType = ReturnType<typeof sub>
+let num1: parameterType= [36464,37474];
+let num2 :returnType = 37474;
+console.log(num1);
+console.log(num2)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
